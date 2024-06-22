@@ -1,0 +1,4 @@
+imgs/cifar-10-batches-py
+.DS_Store
+.idea
+__pycache__
