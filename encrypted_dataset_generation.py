@@ -18,8 +18,8 @@ def main():
     for i in tqdm.tqdm(range(len(img_name_list))):
         img_path = os.path.join(dataset_root, img_name_list[i])
         destination_path = os.path.join(saving_root, img_name_list[i])
-        img = loading_img_cv2format(img_path)
 
+        img = loading_img_cv2format(img_path)
         block_group = block_division(img, block_size)
         pos_shuffled_block_group = block_pos_shuffling(block_group, key_dict['pos_key'])
         mix_shuffled_block_group = block_pix_shuffling(pos_shuffled_block_group, key_dict['pe_key'])

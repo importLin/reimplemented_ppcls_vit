@@ -14,9 +14,6 @@ def main():
         img, label = img_data[0], img_data[1]
         # 　BICUBIC補間
         img = img.resize((224, 224), Image.BICUBIC)
-
-        # 個人的は -> 一定の長さをもったid + ラベル + png のほうが処理上に便利
-        # 重複したIdが発生しないようにIdの長さを8にしておく（CIFAR10には6万枚画像ある）
         img_name = f'{idx:08d}_{label}.png'
         img.save(os.path.join(saving_root, img_name))
 

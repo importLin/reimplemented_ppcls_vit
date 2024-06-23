@@ -82,7 +82,7 @@ def main():
     model.eval()
     with torch.no_grad():
         out = model(img_tensor)
-        print(f"inference result: class {out.argmax(axis=1).item()}")
+        print(f"inference result: class {out.argmax(axis=-1).item()}")
 
 
 if __name__ == '__main__':
